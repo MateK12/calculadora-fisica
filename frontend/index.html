@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/frontend/bootstrap.min.css">
     <link rel="stylesheet" href="/frontend/styles.css">
+    <link  rel="icon"  href="./favicon.png" type="image/png" />
     <title>Fisica 3ro y 5to</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
     <div  id="padre" class="container">
         <div  class="row">
 
-            <div id="fila_cont" class="col-xl-6">
+            <div id="fila_cont" class="col-xl-4">
                 <h3>Plano inclinado</h3>
                 <div class="col-xl-6">
                     <div class="form-group">
@@ -27,40 +28,40 @@
                         
                     </div>
                 </div>
-                <div class="col-xl-6">
+                <div class="col-xl-4">
                     <div class="form-group">
                         <label class="col-form-label mt-4" for="inputDefault"><h4>Masa</h4></label>
                         <input type="text" class="form-control" placeholder="masa" id="masa_input">                        
                     </div>
                 </div>
-                <div class="">
+                <div class="col-xl-4">
                     <div class="form-group">
                         <label class="col-form-label mt-4" for="inputDefault"><h4>Fuerza</h4></label>
                         <input type="text" class="form-control" placeholder="fuerza" id="fuerza_input">                        
                     </div>
                 </div>
                 <br>
-                <div class="col-xl-6">
+                <div class="col-xl-4">
                     <div class="form-group">
                         <label for="exampleSelect2" class="form-label mt-4">¿Hay friccion?</label>
-                    
+                      <br>
                         <button type="button" id="friccion_si" class="btn btn-primary">Si</button>
                         <button type="button" id="friccion_no" class="btn btn-primary">No</button>
-                       
+
                       </div>
                   </div>
-                  <div id="div_boton" class="col-xl-4">
-                    <br><br><br>
-        
-                    <button type="" id="bot_alcular" class="btn btn-primary">Calcular plano inclinado</button>
-        
+                 
+                <br>
+                <div class="col-xl-4">
+                  <button type="" id="bot_alcular" class="btn btn-primary">Calcular plano inclinado</button>
                 </div>
                 <br>
             </div>
             
-            <div class="col-xl-6">
+
+            <div class="col-xl-4">
                 <h3>Plano NO inclinado</h3>
-                <div class="col-xl-4">
+                <div class="col-xl-12">
                     <label for="exampleSelect1" class="form-label mt-4">¿Que quiere calcular?</label>
                     <select class="form-select" id="select_pni">
                       <option value="1">Masa</option>
@@ -72,24 +73,49 @@
                     <button type="" id="calcular_PNI" class="btn btn-primary">Calcular plano NO inclinado</button>
 
                 </div>
-                
-            </div>
-           
-            <div class="col-xl-4">
-
+               
             </div>
             <div class="col-xl-4">
-
-            </div>
-            <div id="resultados" class="col-xl-4">
+              <div class="col-xl-12">
                 <br><br><br>
                 <div  class="card text-white bg-success mb-3" style="max-width: 20rem;">
-                    <div class="card-header">resultados</div>
+                    <div class="card-header">Resultados</div>
                     <div id="cont_resultados" class="card-body">
                       <h4 class="card-title"></h4>
                       <p class="card-text"></p>
                     </div>
                 </div>
+              </div>
+              <div class="col-xl-12">
+                  <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                      <div class="card-header">Hecho por:</div>
+                      <div class="card-body">
+                        <h4 class="card-title">Mateo Kristich</h4>
+                        <h6 class="card-text">5to informatica</h6>
+                        <p>Frontend en HTML, CSS y JavaScript</p>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-12">
+                  <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                  <div class="card-header">Hecho por:</div>
+                  <div class="card-body">
+                    <h4 class="card-title">Iñaki Gongora</h4>
+                    <h6 class="card-text">3ro informatica</h6>
+                    <p>Calculadora en python</p>
+                  </div>
+                  </div>
+              </div>
+            </div>
+
+            
+            
+            <div class="col-xl-4">
+
+            </div>
+            <div id="resultados" class="col-xl-4">
+                
             </div>
             <div class="col-xl-4">
 
@@ -101,27 +127,7 @@
 </main>
 <footer>
     <div class="row">
-        <div class="col-xl-4">
-            
-        </div>
-        <div class="col-xl-4">
-            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                <div class="card-header">Hecho por:</div>
-                <div class="card-body">
-                  <h4 class="card-title">Mateo Kristich</h4>
-                  <p class="card-text">5to informatica</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-4">
-            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-            <div class="card-header">Hecho por:</div>
-            <div class="card-body">
-              <h4 class="card-title">Iñaki Gongora</h4>
-              <p class="card-text">3ro informatica</p>
-            </div>
-        </div>
-        </div>
+        
         
     </div>
 </footer>

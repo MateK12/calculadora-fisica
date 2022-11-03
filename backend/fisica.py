@@ -24,7 +24,7 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
 
     def fricc(normal):
         global fric_e, fric_d
-        delay_print("TABLA DE MATERIALES:")
+        # delay_print("TABLA DE MATERIALES:")
         print("\n1)Madera sobre madera \n2)Acero sobre hielo\n3)Teflón sobre teflón\n4)Caucho sobre cemento seco\n5)Vidrio sobre vidrio\n6)Esquí sobre nieve\n7)Madera sobre cuero\n8)Aluminio sobre acero\n9)Articulaciones humanas\n10)Personalizado")
         mat=materiales
         if mat==1:
@@ -73,15 +73,15 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
     resultados=[]
     cont_resultados=0
     x=True
-    delay_print ("¡Bienvenido/a a la calculadora física, hecha por Iñaki Góngora!")
+    # delay_print ("¡Bienvenido/a a la calculadora física, hecha por Iñaki Góngora!")
     for poaa in range(1):
         result = []
 
         cont_resultados+=1
         if cont_resultados>1:
-            delay_print("¡Bienvenido de nuevo!")
-        delay_print ("\n¿Quiere usar un plano inclinado?")
-        delay_print ("\nSi: 1\nNo: 2")
+            # delay_print("¡Bienvenido de nuevo!")
+            print ("\n¿Quiere usar un plano inclinado?")
+            print ("\nSi: 1\nNo: 2")
         plano=pla
         if plano == 1:
             ang=angulo
@@ -90,7 +90,7 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
                 ang=float(input("Ingrese la inclinación en grados (0°-90°)"))
             ang=ang-ang*2
             ang=math.radians(ang)
-            delay_print("CALCULADORA DE ACELERACIÓN")
+            # delay_print("CALCULADORA DE ACELERACIÓN")
             grav=9.8
             masa=masa
             fuerza=fuerza
@@ -141,10 +141,10 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
 
 
         elif plano == 2:
-            delay_print ("Fuerza: 1\nMasa: 2\nAceleración: 3")
+            # delay_print ("Fuerza: 1\nMasa: 2\nAceleración: 3")
             op=op_A
             if op == 1:
-                delay_print("CALCULADORA DE FUERZA")
+                # delay_print("CALCULADORA DE FUERZA")
                 masa=masa
                 acel=acel_A
                 fuerza=masa*acel
@@ -155,7 +155,7 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
                 result.append(resultado)
 
             elif op == 2:
-                delay_print("CALCULADORA DE MASA")
+                # delay_print("CALCULADORA DE MASA")
                 fuerza=fuerza
                 acel=acel_A
                 masa=fuerza/acel
@@ -166,7 +166,7 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
                 result.append(resultado)
 
             elif op == 3:
-                delay_print("CALCULADORA DE ACELERACIÓN")
+                # delay_print("CALCULADORA DE ACELERACIÓN")
                 grav=9.8
                 masa=masa
                 fuerza=fuerza
@@ -213,9 +213,9 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
                     print("¡Eso no es una opcion valida!")
                     
             else:
-                delay_print("Elija una operación valida")
+                print("Elija una operación valida")
         else:
-            delay_print("Elija una operación valida")
+            print("Elija una operación valida")
             
         
         
@@ -226,7 +226,7 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
         # else: 
         #     x=False
             
-        delay_print("¡Gracias por susar esta calculadora!")
+    print("¡Gracias por susar esta calculadora!")
     time.sleep(3)
     print(result)
     return result

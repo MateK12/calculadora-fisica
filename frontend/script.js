@@ -234,8 +234,12 @@ const envio_datos = async (e)=>{
     })
     const data = await respuesta.json();
     console.log(data)
-    cont_resultados.innerHTML = data.mensaje
-  }
+    for (let i = 0; i < data.mensaje.length; i++) {
+        console.log(data.mensaje.length)
+        let br = document.createElement("br")
+        cont_resultados.innerHTML =data.mensaje
+        cont_resultados.appendChild(br)
+    }  }
 const envio_datos_PNI = async (e)=>{
     console.log("kkkk")
     const respuesta = await fetch(`${API}/calcular_PNI`,{
@@ -247,9 +251,8 @@ const envio_datos_PNI = async (e)=>{
     const data = await respuesta.json();
     console.log(data.mensaje)
     for (let i = 0; i < data.mensaje.length; i++) {
-        let h5_respuesta = document.createElement("h5");
-        h5_respuesta.innerHTML = data.mensaje[i];
-        cont_resultados.innerHTML = h5_respuesta
+       
+        cont_resultados.innerHTML = data.mensaje
 
     }
 

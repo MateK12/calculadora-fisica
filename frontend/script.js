@@ -9,7 +9,7 @@ let select_pni = document.getElementById("select_pni");
 let cont_pni = document.getElementById("cont_pni");
 let calcular = document.getElementById("bot_alcular");
 mensaje_back = {
-    "plano":1,
+    "plano":0,
     "angulo":0,
     "masa":0,
     "fuerza":0,
@@ -50,8 +50,8 @@ fuerza_input.addEventListener("blur",()=>{
 })
 
 friccion_si.addEventListener("click",()=>{
-    mensaje_back.plano = 1
-    mensaje_back.existencia_friccion = 1;
+    mensaje_back.plano =1
+    mensaje_back.existencia_friccion =1;
     let select = document.createElement("select");
     select.setAttribute("id","select_materiales");
     for (let i = 0; i < opciones.length; i++) {
@@ -89,7 +89,7 @@ friccion_si.addEventListener("click",()=>{
     
 })
 friccion_no.addEventListener("click",()=>{
-    mensaje_back.plano = 1
+    mensaje_back.existencia_friccion =2
 
 })
 select_pni.addEventListener("blur",()=>{
@@ -97,6 +97,7 @@ select_pni.addEventListener("blur",()=>{
     i = parseInt(val_sel);
     mensaje_back.que_calcular = i;
     if(val_sel == 1){
+        mensaje_back.plano = 2
         cont_pni.innerHTML=`  <div class="form-group">
         <label class="col-form-label mt-4" for="inputDefault"><h4>Fuerza</h4></label>
         <input type="text" class="form-control" placeholder="fuerza" id="fuerza_input_pni">                        
@@ -117,6 +118,7 @@ select_pni.addEventListener("blur",()=>{
     
     })}
     if (val_sel==2) {
+        mensaje_back.plano = 2
         cont_pni.innerHTML=`  <div class="form-group">
         <label class="col-form-label mt-4" for="inputDefault"><h4>Masa</h4></label>
         <input  type="text" class="form-control" placeholder="masa" id="masa_input_pni">
@@ -138,6 +140,7 @@ select_pni.addEventListener("blur",()=>{
     })}
     
     if (val_sel==3) {
+        mensaje_back.plano = 2
         cont_pni.innerHTML=`  <div class="form-group">
         <label class="col-form-label mt-4" for="inputDefault"><h4>Masa</h4></label>
         <input  type="text" class="form-control" placeholder="masa" id="masa_input_pni">
@@ -150,8 +153,8 @@ select_pni.addEventListener("blur",()=>{
         </div>`
         let friccion_no_pni = document.getElementById("friccion_no_pni");
         friccion_no_pni.addEventListener("click",()=>{
-            mensaje_back.E_friccion = 2
-            mensaje_back.plano = 2
+            mensaje_back.existencia_friccion =2
+            mensaje_back.plano =2
         })
         let fuerza_input_pni = document.getElementById("fuerza_input_pni");
         let masa_pni = document.getElementById("masa_input_pni");
@@ -184,8 +187,8 @@ select_pni.addEventListener("blur",()=>{
         `
 
         friccion_si_pni.addEventListener("click",()=>{
-                mensaje_back.existencia_friccion = 1;
-                mensaje_back.plano = 2
+                mensaje_back.existencia_friccion =1;
+                mensaje_back.plano =2
                 cont_sel.innerHTML = html_select;
                 let select_materiales_pni = document.getElementById("select_materiales_pni")
                 select_materiales_pni.addEventListener("blur",()=>{
@@ -218,7 +221,7 @@ select_pni.addEventListener("blur",()=>{
         }
     }
 )
-
+let cont_resultados = document.getElementById("cont_resultados")
 console.log(mensaje_back)
 let API = "http://127.0.0.1:5000"
 const envio_datos = async (e)=>{
@@ -231,6 +234,26 @@ const envio_datos = async (e)=>{
     })
     const data = await respuesta.json();
     console.log(data)
+    cont_resultados.innerHTML = data.mensaje
+  }
+const envio_datos_PNI = async (e)=>{
+    console.log("kkkk")
+    const respuesta = await fetch(`${API}/calcular_PNI`,{
+      method:"POST",
+      headers:{"Content-Type":"application/json"
+    },
+    body: JSON.stringify(mensaje_back)
+    })
+    const data = await respuesta.json();
+    console.log(data.mensaje)
+    for (let i = 0; i < data.mensaje.length; i++) {
+        let h5_respuesta = document.createElement("h5");
+        h5_respuesta.innerHTML = data.mensaje[i];
+        cont_resultados.innerHTML = h5_respuesta
+
+    }
+
   }
 calcular.addEventListener("click",envio_datos)
-    
+let calcula_PNI = document.getElementById("calcular_PNI");
+calcula_PNI.addEventListener("click",envio_datos_PNI)

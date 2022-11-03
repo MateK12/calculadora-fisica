@@ -83,7 +83,7 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
         delay_print ("\n¿Quiere usar un plano inclinado?")
         delay_print ("\nSi: 1\nNo: 2")
         plano=pla
-        if plano==1:
+        if plano == 1:
             ang=angulo
             while ang > 90 or ang<0:
                 print ("Eso no es una opción válida.")
@@ -117,7 +117,7 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
                     acel=round(acel,4)
                     resultado="El resultado número: ",cont_resultados," es igual a : ",acel,"m/s^2"
                     resultados.append(resultado)
-                    graf(acel)
+                    # graf(acel)
                 else:
                     result.append("\nEl objeto no se moverá")
                     result.append("\nLa aceleración es 0")
@@ -130,11 +130,12 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
                 acel=fuerzaNeta/masa
                 if acel<0:
                     result.append("El objeto se moverá cuesta abajo")
-                result.append("\nLa aceleración es: ",acel,"m/s^2")
+                vari = "\nLa aceleración es: ",acel,"m/s^2"
+                result.append(vari)
                 acel=round(acel,4)
                 resultado="El resultado número: ",cont_resultados," es igual a: ",acel,"m/s^2"
                 result.append(resultado)
-                graf(acel)
+                # graf(acel)
             else:
                 print("¡Eso no es una opcion valida!")           
 
@@ -190,7 +191,7 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
                         acel=round(acel,4)
                         var2="El resultado número: ",cont_resultados," es igual a: ",acel,"m/s^2"
                         result.append(var2)
-                        graf(acel)
+                        # graf(acel)
 
                     else:
                         result.append("\nEl objeto no se moverá")
@@ -207,7 +208,7 @@ def simular(pla,angulo,masa,fuerza,E_friccion,materiales,friccion_estatica,fricc
                     acel=round(acel,4)
                     resultado=('El resultado número: ',cont_resultados,'es igual a: ',acel,"m/s^2")
                     result.append(resultado)
-                    graf(acel)
+                    # graf(acel)
                 else:
                     print("¡Eso no es una opcion valida!")
                     

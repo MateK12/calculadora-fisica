@@ -11,7 +11,7 @@
 <body>
 <header >
     
-    <h1>Calculador de cargas</h1>
+    <h1>Calculadora de fisica</h1>
 </header>
 <main>
     <div  id="padre" class="container">
@@ -49,7 +49,13 @@
                        
                       </div>
                   </div>
-                
+                  <div id="div_boton" class="col-xl-4">
+                    <br><br><br>
+        
+                    <button type="" id="bot_alcular" class="btn btn-primary">Calcular plano inclinado</button>
+        
+                </div>
+                <br>
             </div>
             
             <div class="col-xl-6">
@@ -62,14 +68,13 @@
                       <option value="3">Aceleracion</option>
                     </select>
                     <div id="cont_pni"></div>
+                    <br>
+                    <button type="" id="calcular_PNI" class="btn btn-primary">Calcular plano NO inclinado</button>
+
                 </div>
+                
             </div>
-            <div id="div_boton" class="col-xl-4">
-                <br><br><br>
-    
-                <button type="" id="bot_alcular" class="btn btn-primary">Calcular</button>
-    
-            </div>
+           
             <div class="col-xl-4">
 
             </div>
@@ -78,11 +83,11 @@
             </div>
             <div id="resultados" class="col-xl-4">
                 <br><br><br>
-                <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+                <div  class="card text-white bg-success mb-3" style="max-width: 20rem;">
                     <div class="card-header">resultados</div>
-                    <div class="card-body">
-                      <h4 class="card-title">Success card title</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div id="cont_resultados" class="card-body">
+                      <h4 class="card-title"></h4>
+                      <p class="card-text"></p>
                     </div>
                 </div>
             </div>

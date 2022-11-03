@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/bootstrap.min.css">
+    <link rel="stylesheet" href="/frontend/styles.css">
+    <title>Fisica 3ro y 5to</title>
+</head>
+<body>
+<header >
+    
+    <h1>Calculador de cargas</h1>
+</header>
+<main>
+    <div  id="padre" class="container">
+        <div  class="row">
+
+            <div id="fila_cont" class="col-xl-6">
+                <h3>Plano inclinado</h3>
+                <div class="col-xl-6">
+                    <div class="form-group">
+                        <label class="col-form-label mt-4" for="inputDefault"><h4>Angulo</h4></label>
+                        <input  type="text" class="form-control" placeholder="Angulo" id="angulo_input">
+                        <label class="col-form-label mt-4" for="inputDefault">Angulo entre 0° y 90°</label>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="form-group">
+                        <label class="col-form-label mt-4" for="inputDefault"><h4>Masa</h4></label>
+                        <input type="text" class="form-control" placeholder="masa" id="masa_input">                        
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-group">
+                        <label class="col-form-label mt-4" for="inputDefault"><h4>Fuerza</h4></label>
+                        <input type="text" class="form-control" placeholder="fuerza" id="fuerza_input">                        
+                    </div>
+                </div>
+                <br>
+                <div class="col-xl-6">
+                    <div class="form-group">
+                        <label for="exampleSelect2" class="form-label mt-4">¿Hay friccion?</label>
+                    
+                        <button type="button" id="friccion_si" class="btn btn-primary">Si</button>
+                        <button type="button" id="friccion_no" class="btn btn-primary">No</button>
+                       
+                      </div>
+                  </div>
+                
+            </div>
+            
+            <div class="col-xl-6">
+                <h3>Plano NO inclinado</h3>
+                <div class="col-xl-4">
+                    <label for="exampleSelect1" class="form-label mt-4">¿Que quiere calcular?</label>
+                    <select class="form-select" id="select_pni">
+                      <option value="1">Masa</option>
+                      <option value="2">Fuerza</option>
+                      <option value="3">Aceleracion</option>
+                    </select>
+                    <div id="cont_pni"></div>
+                </div>
+            </div>
+            <div id="div_boton" class="col-xl-4">
+                <br><br><br>
+    
+                <button type="" id="bot_alcular" class="btn btn-primary">Calcular</button>
+    
+            </div>
+            <div class="col-xl-4">
+
+            </div>
+            <div class="col-xl-4">
+
+            </div>
+            <div id="resultados" class="col-xl-4">
+                <br><br><br>
+                <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+                    <div class="card-header">resultados</div>
+                    <div class="card-body">
+                      <h4 class="card-title">Success card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+
+        </div>
+        
+        <br><br>
+        
+        
+</main>
+<footer>
+    <div class="row">
+        <div class="col-xl-4">
+            
+        </div>
+        <div class="col-xl-4">
+            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Hecho por:</div>
+                <div class="card-body">
+                  <h4 class="card-title">Mateo Kristich</h4>
+                  <p class="card-text">5to informatica</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">Hecho por:</div>
+            <div class="card-body">
+              <h4 class="card-title">Iñaki Gongora</h4>
+              <p class="card-text">3ro informatica</p>
+            </div>
+        </div>
+        </div>
+        
+    </div>
+</footer>
+<script src="/frontend/script.js"></script>
+</body>
+</html>

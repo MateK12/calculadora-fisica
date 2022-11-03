@@ -1,0 +1,13 @@
+header{
+    text-align: center;
+}
+
+#div_boton>button{
+    position: relative;
+    top: 20%;
+    left: 40%;
+}
+#resultados{
+    position: relative;
+    top: 20%;
+    left: 5%;}

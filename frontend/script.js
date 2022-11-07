@@ -67,9 +67,9 @@ friccion_si.addEventListener("click",()=>{
         mensaje_back.materiales = p
         if(valor_select == 10){
             let cont_fricciones = document.createElement("div");
-            cont_fricciones.innerHTML=`<label class="col-form-label mt-4" for="inputDefault">Friccion dinamica</label>
+            cont_fricciones.innerHTML=`<label class="col-form-label mt-4" for="inputDefault">Friccion dinamica (Número entre 0 y 1 usar .)</label>
                                         <input type="text" class="form-control" placeholder="numero entre 0 y 1" id="f_dinamica">
-                                        <label class="col-form-label mt-4" for="inputDefault">Friccion estatica</label>
+                                        <label class="col-form-label mt-4" for="inputDefault">Friccion estatica (Número entre 0 y 1 usar .)</label>
                                         <input type="text" class="form-control" placeholder="numero entre 0 y 1" id="f_estatica">`
             fila_cont.appendChild(cont_fricciones)
             let dinamica = document.getElementById("f_dinamica");
@@ -196,10 +196,10 @@ select_pni.addEventListener("blur",()=>{
                     mensaje_back.materiales = parseInt(valor_select1)
                     if(valor_select1 == 10){
                         let conte_pni = document.getElementById("conte_pni");
-                        conte_pni.innerHTML=`<label class="col-form-label mt-4" for="inputDefault">Friccion dinamica</label>
-                                                    <input type="text" class="form-control" placeholder="numero entre 0 y 1" id="f_dinamica">
-                                                    <label class="col-form-label mt-4" for="inputDefault">Friccion estatica</label>
-                                                    <input type="text" class="form-control" placeholder="numero entre 0 y 1" id="f_estatica">`
+                        conte_pni.innerHTML=`<label class="col-form-label mt-4" for="inputDefault">Friccion dinamica (Número entre 0 y 1 usar .)</label>
+                                                    <input type="text" class="form-control" placeholder="fricción dinamica 0 y 1" id="f_dinamica">
+                                                    <label class="col-form-label mt-4" for="inputDefault">Friccion estatica (Número entre 0 y 1 usar .)</label>
+                                                    <input type="text" class="form-control" placeholder="fricción estatica" id="f_estatica">`
                         // fila_cont.appendChild(cont_fricciones)
                         let dinamica = document.getElementById("f_dinamica");
                         let estatica = document.getElementById("f_estatica");

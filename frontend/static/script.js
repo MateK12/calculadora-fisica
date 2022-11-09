@@ -223,7 +223,7 @@ select_pni.addEventListener("blur",()=>{
 )
 let cont_resultados = document.getElementById("cont_resultados")
 console.log(mensaje_back)
-let API = "http://127.0.0.1:5000"
+let API = "http://localhost:5000"
 const envio_datos = async (e)=>{
     console.log("kkkk")
     const respuesta = await fetch(`${API}/calcular`,{

@@ -99,9 +99,9 @@ friccion_no.addEventListener("click",()=>{
 })
 select_pni.addEventListener("blur",()=>{
     let val_sel = document.getElementById("select_pni").value;
-    i = parseInt(val_sel);
-    mensaje_back.que_calcular = i;
+    
     if(val_sel == 1){
+        mensaje_back.que_calcular = 2
         mensaje_back.plano = 2
         cont_pni.innerHTML=`  <div class="form-group">
         <label class="col-form-label mt-4" for="inputDefault"><h4>Fuerza</h4></label>
@@ -123,6 +123,7 @@ select_pni.addEventListener("blur",()=>{
     
     })}
     if (val_sel==2) {
+        mensaje_back.que_calcular = 1
         mensaje_back.plano = 2
         cont_pni.innerHTML=`  <div class="form-group">
         <label class="col-form-label mt-4" for="inputDefault"><h4>Masa</h4></label>
@@ -145,6 +146,7 @@ select_pni.addEventListener("blur",()=>{
     })}
     
     if (val_sel==3) {
+        mensaje_back.que_calcular = 3
         mensaje_back.plano = 2
         cont_pni.innerHTML=`  <div class="form-group">
         <label class="col-form-label mt-4" for="inputDefault"><h4>Masa</h4></label>
